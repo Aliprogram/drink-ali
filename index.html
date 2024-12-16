@@ -3,11 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebidas</title>
+    <title>Promoción de Productos</title>
+    <style>
+        /* General */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1e90ff;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1rem;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1e90ff;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #0056b3;
+        }
+
+        /* Productos */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .product {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 15px;
+        }
+        .product h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .product p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .product button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contacto */
+        #contacto {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #contacto h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1e90ff;
+        }
+        #contacto form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #contacto input, #contacto textarea, #contacto button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        #contacto input:focus, #contacto textarea:focus {
+            border-color: #1e90ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+        }
+        #contacto button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #contacto button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e90ff;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        proyecto_rous_programas para el futuro
-    </h1>
+    <header>
+        <h1>MAYORISTA DE BEBIDAS</h1>
+        <p>Descubre los mejores precios y entrega inmediata</p>
+    </header>
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container" id="productos">
+        <div class="product-grid">
+            <!-- Productos -->
+            <div class="product">
+                <img src="archivos/brahma_473_cc.jpg" alt="BRAHMA 473cc">
+                <h3>BRAHMA</h3>
+                <p>lata de 473cc</p>
+                <button>Más Información</button>
+            </div>
+            <div class="product">
+                <img src="archivos/corona_330.jpg" alt="Producto 2">
+                <h3>CORONA</h3>
+                <p>envase vidrio 330 ml</p>
+                <button>Más Información</button>
+            </div>
+            <div class="product">
+                <img src="archivos/amber_473.jpg" alt="Producto 3">
+                <h3>PATAGONIA</h3>
+                <p>amber lagger lata 473cc</p>
+                <button>Más Información</button>
+            </div>
+            <div class="product">
+                <img src="archivos/fernet_750.jpg" alt="Producto 4">
+                <h3>FERNET BRANCA</h3>
+                <p>clasico 750ml</p>
+                <button>Más Información</button>
+            </div>
+            <div class="product">
+                <img src="archivos/alma_mora_reserva.jpg" alt="Producto 5">
+                <h3>ALMA MORA</h3>
+                <p>reserva 2020</p>
+                <button>Más Información</button>
+            </div>
+            <div class="product">
+                <img src="archivos/smirnoff_998.jpg" alt="Producto 6">
+                <h3>SMIRNOFF</h3>
+                <p>vodka clasico 998ml</p>
+                <button>Más Información</button>
+            </div>
+        </div>
+    </div>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna consulta, no dudes en contactarnos.</p>
+        <form action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 LIMACHE'S designs</p>
+    </footer>
 </body>
 </html>
